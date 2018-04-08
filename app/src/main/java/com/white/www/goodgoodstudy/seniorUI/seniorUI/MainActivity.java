@@ -1,14 +1,12 @@
-package com.white.www.goodgoodstudy.seniorUI;
+package com.white.www.goodgoodstudy.seniorUI.seniorUI;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.white.www.goodgoodstudy.R;
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("确定", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
+                                Toast.makeText(MainActivity.this,"点击了确定",Toast.LENGTH_SHORT).show();
                             }
                         })
                         .show();

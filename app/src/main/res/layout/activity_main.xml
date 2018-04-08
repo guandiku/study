@@ -4,20 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.white.www.goodgoodstudy.seniorUI.MainActivity">
+    tools:context="com.white.www.goodgoodstudy.seniorUI.seniorUI.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <!--用来装饰toolbar-->
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="260dp">
+        <!--用来装饰折叠的toolbar-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorAccent"
+            app:expandedTitleGravity="center_horizontal"
+            app:collapsedTitleGravity="center_horizontal"
+            android:minHeight="100dp"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:statusBarScrim="@color/colorPrimary">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:layout_collapseMode="pin" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/colorAccent"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1"
+                app:logo="@mipmap/ic_launcher"
+                app:navigationIcon="@mipmap/ic_launcher"
+                app:title="动脑学习">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_anchor="@+id/recyclerView"
-        app:layout_anchorGravity="bottom|center"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_gravity="bottom|right"
+        android:layout_margin="30dp"
+        android:elevation="10dp"
+        app:fabSize="normal" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="fsdfsdfdfsfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdfsdfsdfdfsdd" />
+    </android.support.v4.widget.NestedScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>
